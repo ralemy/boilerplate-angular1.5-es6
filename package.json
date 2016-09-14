@@ -1,0 +1,26 @@
+{
+  "name": "boilerplate-angular1.5-es6",
+  "version": "1.0.0",
+  "description": "a boilerplate project to develop angular1.5 applications with es6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralemy/boilerplate-angular1.5-es6.git"
+  },
+  "keywords": [
+    "angular1.5",
+    "es6",
+    "gulp",
+    "webpack",
+    "babel"
+  ],
+  "author": "reza alemy",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ralemy/boilerplate-angular1.5-es6/issues"
+  },
+  "homepage": "https://github.com/ralemy/boilerplate-angular1.5-es6#readme"
+}
