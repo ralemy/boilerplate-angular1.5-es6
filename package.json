@@ -4,7 +4,8 @@
   "description": "a boilerplate project to develop angular1.5 applications with es6",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp --gulpfile config/gulpfile.babel.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/ralemy/boilerplate-angular1.5-es6/issues"
   },
-  "homepage": "https://github.com/ralemy/boilerplate-angular1.5-es6#readme"
+  "homepage": "https://github.com/ralemy/boilerplate-angular1.5-es6#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0"
+  }
 }
