@@ -1,5 +1,6 @@
 /**
  * Created by ralemy on 9/15/16.
+ * Sample spec unit test file to show use of mocha.
  */
 
 import MyDefaultClass from "./MyDefaultClass";
