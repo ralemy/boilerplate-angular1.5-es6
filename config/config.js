@@ -18,7 +18,7 @@ export default {
         return path.resolve(this.build.src, "**", "*.spec.js");
     },
     getRootFile: function () {
-        return path.resolve(this.build.src, "app.js");
+        return path.resolve(this.build.src, "main.js");
     },
     getMainPage: function () {
         return path.resolve(this.build.src, "index.pug");

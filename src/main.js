@@ -1,9 +1,10 @@
 /**
  * Created by ralemy on 9/14/16.
- * File to test gulp lint task
+ * This entry point file should not be edited.
  */
 
 import Myclass from "./MyDefaultClass";
+import "./sass/base.scss";
 
 class someClass {
     someMethod() {
