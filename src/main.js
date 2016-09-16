@@ -7,10 +7,12 @@ import Myclass from "./MyDefaultClass";
 import "./sass/base.scss";
 
 class someClass {
-    someMethod() {
-        this.someVariable = 10;
+    static someMethod() {
+        Myclass.staticMethod();
+        new Myclass(10).dynamicMethod();
     }
 }
 
-Myclass.staticMethod();
-new Myclass(10).dynamicMethod();
+someClass.someMethod();
+
+export default someClass;

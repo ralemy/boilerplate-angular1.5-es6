@@ -14,7 +14,7 @@ export default {
     getSourceMask: function () {
         return path.resolve(this.build.src, "**", "*.js");
     },
-    getSpecsMask: function () {
+    getUnitTestMask: function () {
         return path.resolve(this.build.src, "**", "*.spec.js");
     },
     getRootFile: function () {

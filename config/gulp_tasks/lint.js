@@ -9,7 +9,7 @@ import path from "path";
 
 export default function(gulp){
     const src = config.getSourceMask(),
-        specs = config.getSpecsMask();
+        specs = config.getUnitTestMask();
     return () =>gulp.src([src,`!${specs}`]).pipe(eslint()).pipe(eslint.format()).pipe(eslint.failAfterError());
 }
 
