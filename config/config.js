@@ -2,13 +2,25 @@
 import path from "path";
 export default {
     build: {
-        destination: path.resolve(__dirname, "..", "dist", "**"),
-        src: path.resolve(__dirname,"..","src")
+        distribution: path.resolve(__dirname, "..", "dist"),
+        src: path.resolve(__dirname, "..", "src")
     },
-    getSourceMask:function(){
-        return path.resolve(this.build.src,"**","*.js");
+    getDistribution: function () {
+        return this.build.distribution;
     },
-    getSpecsMask:function(){
-        return path.resolve(this.build.src,"**","*.spec.js");
+    getDistributionMask: function () {
+        return path.resolve(this.build.distribution, "**");
+    },
+    getSourceMask: function () {
+        return path.resolve(this.build.src, "**", "*.js");
+    },
+    getSpecsMask: function () {
+        return path.resolve(this.build.src, "**", "*.spec.js");
+    },
+    getRootFile: function () {
+        return path.resolve(this.build.src, "app.js");
+    },
+    getMainPage: function () {
+        return path.resolve(this.build.src, "index.pug");
     }
 };
