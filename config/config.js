@@ -4,37 +4,47 @@ export default {
     build: {
         distribution: path.resolve(__dirname, "..", "dist"),
         src: path.resolve(__dirname, "..", "src"),
-        node_modules: path.resolve(__dirname,"..","node_modules"),
+        node_modules: path.resolve(__dirname, "..", "node_modules"),
         server: path.resolve(__dirname)
     },
-    getServerScript: function () {
-        return path.resolve(this.build.server,"serve.js");
+    angular: {
+        bootstrap: "bootstrap",
+        appName: "MyApp"
     },
-    getDistribution: function () {
+    getAngularApp(){
+        return path.resolve(this.build.src, "app");
+    },
+    getKarmaConfig(){
+        return path.resolve(__dirname, "karma.config.js");
+    },
+    getServerScript() {
+        return path.resolve(this.build.server, "serve.js");
+    },
+    getDistribution() {
         return this.build.distribution;
     },
-    getDistributionMask: function () {
-        return path.resolve(this.build.distribution, "**");
+    getDistributionMask() {
+        return [path.resolve(this.build.distribution, "**"),this.getRootFile()];
     },
-    getSourceMask: function () {
+    getSourceMask() {
         return path.resolve(this.build.src, "**", "*.js");
     },
-    getUnitTestMask: function () {
+    getUnitTestMask() {
         return path.resolve(this.build.src, "**", "*.spec.js");
     },
-    getRootFile: function () {
-        return path.resolve(this.build.src, "main.js");
+    getRootFile() {
+        return path.resolve(this.build.src, "entry.js");
     },
-    getServerMask:function(){
+    getServerMask(){
         return path.resolve(this.build.src, "server");
     },
-    getViews: function () {
-        return path.resolve(this.getServerMask(),"views");
+    getViews() {
+        return path.resolve(this.getServerMask(), "views");
     },
-    getRoutes:function(){
-        return path.resolve(this.getServerMask(),"routes.js");
+    getRoutes(){
+        return path.resolve(this.getServerMask(), "routes.js");
     },
-    getBabelNode:function(){
-        return path.resolve(this.build.node_modules, "babel-cli","bin","babel-node.js");
+    getBabelNode(){
+        return path.resolve(this.build.node_modules, "babel-cli", "bin", "babel-node.js");
     }
 };
