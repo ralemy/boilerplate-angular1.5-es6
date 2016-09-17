@@ -1,5 +1,4 @@
 "use strict";
-import HtmlPlugin from "html-webpack-plugin";
 import config from "./config";
 
 let packConfig = {
@@ -12,11 +11,6 @@ let packConfig = {
         filename: "[name].bundle.js",
         chunkFilename: "[id].bundle.js"
     },
-    plugins: [
-        new HtmlPlugin({
-            template: config.getMainPage()
-        })
-    ],
     module: {
         loaders: [
             {

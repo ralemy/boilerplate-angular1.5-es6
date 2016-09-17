@@ -13,6 +13,7 @@ class someClass {
     }
 }
 
+
 someClass.someMethod();
 
 export default someClass;
